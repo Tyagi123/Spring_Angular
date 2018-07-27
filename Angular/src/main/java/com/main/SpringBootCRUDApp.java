@@ -3,7 +3,7 @@ package com.main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.*"})
+@SpringBootApplication
 public class SpringBootCRUDApp {
 
     public static void main(String[] args) {
