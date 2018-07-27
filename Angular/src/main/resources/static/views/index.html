@@ -1,0 +1,25 @@
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-guide-concepts-2-production</title>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="js/lib/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app/app.css"/>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/HomeController.js"></script>
+    <script src="js/app/HomeService.js"></script>
+</head>
+<body>
+<div ng-controller="HomeController">
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+    <form ng-submit="home()">
+        <input class="input login submit" type="submit" placeholder="login!"/>
+    </form>
+</div>
+</body>
+</html>
