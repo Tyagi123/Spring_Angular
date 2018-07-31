@@ -1,9 +1,8 @@
-'use strict'
  var serviceModule=  angular.module('DPSServices', [])
-serviceModule.factory('HomeService', ["$http", "CONSTANTS", function($http, CONSTANTS) {
+serviceModule.factory('HomeService', ["$http",  function($http) {
     var service = {};
     service.home = function() {
-        var url = CONSTANTS.homeurl;
+        var url = "home";
         return $http.get(url);
     }
   /*  service.getAllUsers = function() {

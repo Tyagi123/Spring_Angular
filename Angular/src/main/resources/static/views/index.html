@@ -1,25 +1,28 @@
-<html ng-app="app">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Example - example-guide-concepts-2-production</title>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-    <script src="js/lib/angular-ui-router.min.js"></script>
-    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/app/app.css"/>
+    <script src="js/lib/angular-route.js"></script>
     <script src="js/app/app.js"></script>
     <script src="js/app/HomeController.js"></script>
     <script src="js/app/HomeService.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app/app.css"/>
+
 </head>
 <body>
-<div ng-controller="HomeController">
-    First Name: <input type="text" ng-model="firstName"><br>
-    Last Name: <input type="text" ng-model="lastName"><br>
-    <br>
-    Full Name: {{firstName + " " + lastName}}
+<div ng-app="app" ng-controller="HomeController">
     <form ng-submit="home()">
-        <input class="input login submit" type="submit" placeholder="login!"/>
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{firstName + " " + lastName+" "+ message}}
+        <input class="input login submit" type="submit" id="submit" value="login!"/>
     </form>
+    <ng-view></ng-view>
 </div>
 </body>
 </html>

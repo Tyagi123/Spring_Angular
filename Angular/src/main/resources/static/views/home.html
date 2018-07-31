@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-<div class="container">
-    <h2> Welcome </h2>
-    <p>{{message}}</p>
-    <a href="#/viewStudents"> View Students List</a>
+<div ng-controller="HomeController">
+    <form ng-submit="home()">
+        Full Name: {{firstName + " " + lastName + " "+message}}
+    </form>
+    <ng-view></ng-view>
 </div>
 </body>
 </html>

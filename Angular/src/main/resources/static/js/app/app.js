@@ -1,10 +1,16 @@
-'use strict'
-var app = angular.module('app', ['DPSController','DPSServices'
-]);
-app.constant("CONSTANTS", {
-    homeurl: "home",
-    getAllUsers: "/user/getAllUsers",
-    saveUser: "/user/saveUser",
-    baseUrl:"/"
-});
+var app = angular.module('app', ['ngRoute','DPSController','DPSServices']);
 
+app.config(function($routeProvider) {
+
+$routeProvider.when('/home', {
+templateUrl : 'home.html',
+controller : 'HomeController'
+})
+.when('/', {
+templateUrl : 'index.html',
+controller : 'HomeController',
+})
+.otherwise({
+redirectTo : '/'
+    });
+});
