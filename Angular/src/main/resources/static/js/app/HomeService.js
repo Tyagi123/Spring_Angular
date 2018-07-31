@@ -5,15 +5,26 @@ serviceModule.factory('HomeService', ["$http",function($http,$location) {
         var url = "home";
         return $http.get(url);
     }
-  service.cache = function() {
-  console.log("cache");
-     var url = "home";
-     return $http.get(url);
+
+
+  service.cache = function(name,env) {
+     console.log("cache");
+        var req = {
+            method: 'POST',
+            url: 'cache',
+         params: { personId: name, env: env }
+        }
+         return $http(req);
     }
-      service.user = function() {
+
+      service.user = function(name,env) {
         console.log("user");
-        var url = "home";
-         return $http.get(url);
+        var req = {
+            method: 'POST',
+            url: 'user',
+         params: { personId: name, env: env }
+        }
+         return $http(req);
         }
     return service;
 }]);

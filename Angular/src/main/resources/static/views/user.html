@@ -1,6 +1,39 @@
 <div ng-controller="HomeController">
-    <form ng-submit="user()">
-        PersonId: <input type="text" ng-model="personId"><br>
+    <form name="userFrom" ng-submit="user()">
+        PersonId: <input type="text" ng-model="personId" required><br>
+        <label for="Environment"> Environment</label><br>
+        <select name="Environment" id="Environment" ng-model="Environment" multiple required>
+            <option value="qa01">qa01</option>
+            <option value="qa02">qa02</option>
+            <option value="qa03">qa03</option>
+        </select><br>
         <input class="input login submit" type="submit" id="submit" value="Get"/>
     </form>
+
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><span class="lead">List of Users </span></div>
+        <div class="tablecontainer">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>PersonId</th>
+                    <th>userId</th>
+                    <th>Env</th>
+                    <th width="20%"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="u in listUser">
+                    <td><span ng-bind="u.personId"></span></td>
+                    <td><span ng-bind="u.userId"></span></td>
+                    <td><span ng-bind="u.env"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 </div>

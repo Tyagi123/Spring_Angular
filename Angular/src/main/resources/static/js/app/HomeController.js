@@ -16,7 +16,8 @@
                    });
                     }
                        $scope.user=function (){
-                                 HomeService.user().then(function(value) {
+                                 HomeService.user($scope.personId,$scope.Environment).then(function(value) {
+                                 $scope.listUser=value.data;
                                             $location.path("user");
                                        }, function(reason) {
                                            console.log("error occured");
@@ -24,8 +25,13 @@
                                            console.log("no callback");
                                        });
                                         }
+
+
+
                                            $scope.cache=function (){
-                                                     HomeService.cache().then(function(value) {
+                                                     HomeService.cache($scope.personId,$scope.Environment).then(function(value) {
+                                                     console.log("cache");
+                                                      $scope.cacheObj=value.data;
                                                                 $location.path("cache");
                                                            }, function(reason) {
                                                                console.log("error occured");
