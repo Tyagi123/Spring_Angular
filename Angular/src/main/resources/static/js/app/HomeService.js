@@ -1,15 +1,19 @@
  var serviceModule=  angular.module('DPSServices', [])
-serviceModule.factory('HomeService', ["$http",  function($http) {
+serviceModule.factory('HomeService', ["$http",function($http,$location) {
     var service = {};
     service.home = function() {
         var url = "home";
         return $http.get(url);
     }
-  /*  service.getAllUsers = function() {
-        return $http.get(CONSTANTS.getAllUsers);
+  service.cache = function() {
+  console.log("cache");
+     var url = "home";
+     return $http.get(url);
     }
-    service.saveUser = function(userDto) {
-        return $http.post(CONSTANTS.saveUser, userDto);
-    } */
+      service.user = function() {
+        console.log("user");
+        var url = "home";
+         return $http.get(url);
+        }
     return service;
 }]);

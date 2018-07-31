@@ -15,14 +15,14 @@
 </head>
 <body>
 <div ng-app="app" ng-controller="HomeController">
-    <form ng-submit="home()">
-        First Name: <input type="text" ng-model="firstName"><br>
-        Last Name: <input type="text" ng-model="lastName"><br>
-        <br>
-        Full Name: {{firstName + " " + lastName+" "+ message}}
-        <input class="input login submit" type="submit" id="submit" value="login!"/>
-    </form>
+
+    <div class="topnav">
+        <a href="#" ng-click="user()">User</a>
+        <a href="#" ng-click="cache()">CacheId</a>
+    </div>
+    <div ng-include="'views/error.html'"></div>
     <ng-view></ng-view>
+    <div ui-view></div>
 </div>
 </body>
 </html>
