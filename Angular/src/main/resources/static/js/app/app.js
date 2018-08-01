@@ -13,12 +13,5 @@ controller : 'HomeController'
 .when('/cache', {
 templateUrl : 'views/cache.html',
 controller : 'HomeController'
-})
-.when('/', {
-templateUrl : 'index.html',
-controller : 'HomeController',
-})
-.otherwise({
-redirectTo : '/'
-    });
+});
 });

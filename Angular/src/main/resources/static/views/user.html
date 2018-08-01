@@ -1,13 +1,15 @@
 <div ng-controller="HomeController">
     <form name="userFrom" ng-submit="user()">
-        <b>PersonId: </b> &nbsp;&nbsp;<input type="text" ng-model="personId" required><br>
-        <label for="Environment"> Environment:</label>&nbsp;&nbsp;
-        <select name="Environment" id="Environment" ng-model="Environment" multiple required>
-            <option value="qa01">qa01</option>
+        <br/><br/><br/><br/>
+        <b>PersonId: </b> &nbsp;&nbsp;<input type="text" ng-model="personId" required><br><br><br>
+        <label for="Environment"> Environment:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="Environment" id="Environment" ng-model="Environment" required>
+            <option value="qa01" selected>qa01</option>
             <option value="qa02">qa02</option>
             <option value="qa03">qa03</option>
         </select>
-        <br/<br/>
+        <br/><br/><br/>
+        &nbsp;&nbsp;&nbsp;
         <input class="input login submit" type="submit" id="submit" value="Get User"/>
     </form>
 
