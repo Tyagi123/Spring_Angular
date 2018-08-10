@@ -16,9 +16,34 @@
 <body>
 <div ng-app="app" ng-controller="HomeController">
 
-    <div class="topnav">
-        <a href="#" ng-click="user()">User</a>
-        <a href="#" ng-click="cache()">CacheId</a>
+    <!--   <div class="topnav">
+           <a href="#" ng-click="user()">User</a>
+           <a href="#" ng-click="cache()">CacheId</a>
+           <div class="dropdown">
+               <button class="dropbtn">Dropdown</button>
+               <div class="dropdown-content">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+               </div>
+           </div>
+       </div>
+   -->
+
+    <div class="dpstopnav">
+        <div class="dropdown">
+            <button class="dropbtn">Users</button>
+            <div class="dropdown-content">
+                <a href="#" ng-click="user()">User</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Cache</button>
+            <div class="dropdown-content">
+                <a href="#" ng-click="cache()">CacheId</a>
+            </div>
+        </div>
     </div>
     <div ng-include="'views/error.html'"></div>
     <ng-view></ng-view>
