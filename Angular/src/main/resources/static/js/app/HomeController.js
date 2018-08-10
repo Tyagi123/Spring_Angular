@@ -39,4 +39,17 @@
                                                                console.log("no callback");
                                                            });
                                                             }
+
+
+                                           $scope.appStatus=function (){
+                                                     HomeService.appStatus().then(function(value) {
+                                                     console.log("cache");
+                                                      $scope.listStatus=value.data;
+                                                                $location.path("appstatus");
+                                                           }, function(reason) {
+                                                               console.log("error occured");
+                                                           }, function(value) {
+                                                               console.log("no callback");
+                                                           });
+                                                            }
       }]);

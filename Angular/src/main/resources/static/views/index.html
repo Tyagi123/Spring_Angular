@@ -44,7 +44,15 @@
                 <a href="#" ng-click="cache()">CacheId</a>
             </div>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Status</button>
+            <div class="dropdown-content">
+                <a href="#" ng-click="appStatus()">App Status</a>
+            </div>
+        </div>
+
     </div>
+
     <div ng-include="'views/error.html'"></div>
     <ng-view></ng-view>
     <div ui-view></div>

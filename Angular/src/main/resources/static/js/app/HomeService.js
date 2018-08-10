@@ -26,5 +26,15 @@ serviceModule.factory('HomeService', ["$http",function($http,$location) {
         }
          return $http(req);
         }
+        service.appStatus = function() {
+                console.log("appstatus");
+                var req = {
+                    method: 'GET',
+                    url: 'appstatus',
+                 params: {}
+                }
+                 return $http(req);
+                }
+
     return service;
 }]);

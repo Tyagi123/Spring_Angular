@@ -7,9 +7,13 @@ templateUrl : 'views/home.html',
 controller : 'HomeController'
 })
 .when('/user', {
-templateUrl : 'views/user.html',
-controller : 'HomeController'
-})
+  templateUrl : 'views/user.html',
+  controller : 'HomeController'
+  })
+  .when('/appstatus', {
+  templateUrl : 'views/status.html',
+  controller : 'HomeController'
+  })
 .when('/cache', {
 templateUrl : 'views/cache.html',
 controller : 'HomeController'

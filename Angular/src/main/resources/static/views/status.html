@@ -1,0 +1,30 @@
+<div ng-controller="HomeController">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><span class="lead">
+        <form name="userFrom" ng-submit="appStatus()">
+        <br/><br/><br/><br/>
+        <input class="input login submit" type="submit" id="submit" value="Refresh"/>
+    </form>
+        </span></div>
+        <div class="tablecontainer">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Env</th>
+                    <th>Status</th>
+                    <th width="20%"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="u in listStatus">
+                    <td><span ng-bind="u.env"></span></td>
+                    <td style="color:{{u.status}}"><span ng-bind="u.status"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
